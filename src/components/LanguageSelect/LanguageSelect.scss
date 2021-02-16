@@ -1,0 +1,51 @@
+@import "../../assets/styles/colors.scss";
+
+.language-select {
+  position: relative;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  outline: none;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  &__items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: $dark-grey;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  &__items.open {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+  }
+
+  &__item {
+    padding: 8px 16px;
+    margin: 0 8px;
+    color: $foggy;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid $foggy;
+    }
+
+    &:hover {
+      color: $conifer;
+    }
+  }
+}

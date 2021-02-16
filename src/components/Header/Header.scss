@@ -1,0 +1,152 @@
+@import "../../assets/styles/colors.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+.header {
+  margin: $spacer;
+}
+
+.logo {
+  width: 204px;
+  height: 46px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 24px;
+
+  &__item {
+    margin-right: 3 * $spacer;
+    color: $dark-grey;
+
+    &:hover {
+      color: $military-green;
+    }
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  width: 26px;
+  height: 26px;
+  margin: 0 16px;
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    z-index: 40;
+
+    & > span,
+    & > span::before,
+    & > span::after {
+      display: block;
+      position: absolute;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $pigeon;
+
+      transition-duration: 0.25s;
+    }
+
+    & > span::before {
+      content: "";
+      top: -8px;
+    }
+
+    & > span::after {
+      content: "";
+      top: 8px;
+    }
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__toggle:checked ~ &__btn {
+    & > span {
+      background-color: $foggy;
+      transform: rotate(45deg);
+    }
+
+    & > span::before {
+      background-color: $foggy;
+      top: 0;
+      transform: rotate(0);
+    }
+
+    & > span::after {
+      background-color: $foggy;
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 100%;
+    z-index: 30;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 80px 0;
+
+    list-style: none;
+
+    background-color: $pigeon;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+    transition-duration: 0.25s;
+  }
+
+  &__toggle:checked ~ &__box {
+    visibility: visible;
+    left: 0;
+  }
+
+  &__item {
+    display: block;
+    padding: 12px 24px;
+
+    color: $foggy;
+
+    font-size: 28px;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition-duration: 0.25s;
+
+    &:hover {
+      background-color: $dark-grey;
+      color: $foggy;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
+
+@import './assets/styles/fonts.scss';
+
+body {
+  margin: 0;
+  font-family: Montserrat, 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

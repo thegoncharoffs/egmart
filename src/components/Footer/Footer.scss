@@ -1,0 +1,36 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../assets/styles/colors.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $sherpa-blue;
+  font-size: 18px;
+  color: $foggy;
+
+  & .col-xl-4:nth-child(2) > div {
+    justify-content: center;
+    border: 2px solid $foggy;
+    border-width: 0 2px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: $foggy;
+    fill: $foggy;
+
+    &:hover {
+      color: $conifer;
+      fill: $conifer;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .footer .col-xl-4:nth-child(2) > div {
+    border: 2px solid $foggy;
+    border-width: 2px 0;
+  }
+}
