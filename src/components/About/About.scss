@@ -1,0 +1,78 @@
+@import "../../assets/styles/index";
+
+.photo {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+
+  &__text {
+    font-size: 52px;
+    font-weight: bold;
+    color: $conifer;
+    background-color: $sherpa-blue;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .photo__text {
+    font-size: 48px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .photo__text {
+    font-size: 32px;
+  }
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+
+  &__text {
+    border-left: 18px solid $sherpa-blue;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .description__text {
+    font-size: 18px;
+  }
+}
+
+.team {
+  h1 span {
+    padding-bottom: $spacer;
+    border-bottom: 8px solid $conifer;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  &__name {
+    color: $dark-grey;
+    font-weight: 700;
+  }
+
+  &__job {
+    color: $pigeon;
+    font-weight: 700;
+  }
+}

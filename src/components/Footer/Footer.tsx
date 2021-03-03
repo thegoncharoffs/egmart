@@ -37,12 +37,10 @@ export const Footer: FC<{}> = () => {
           </div>
         </div>
         <div className="col-xl-4">
-          <div className="p-3 d-flex flex-column align-items-center">
-            <a href={addressUrl} className="d-flex">
-              <Location className="flex-schrink-0 mr-3" />
-              {t('footer.address')}
-            </a>
-          </div>
+          <a href={addressUrl} className="p-3 d-flex justify-content-center">
+            <Location className="flex-schrink-0 mr-3" />
+            <span className="word-break word-wrap">{t('footer.address')}</span>
+          </a>
         </div>
       </div>
 

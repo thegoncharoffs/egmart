@@ -3,6 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Main } from './components/Main';
+import { About } from './components/About';
 import './App.scss';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/main"><Main/></Route>
-          <Route path="/about">null</Route>
+          <Route path="/about"><About/></Route>
           <Route path="/contacts">null</Route>
           <Route path="*">
             <Redirect to="/main"/>
