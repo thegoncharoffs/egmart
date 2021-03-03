@@ -74,6 +74,7 @@
     }
 
     &-tile {
+      max-width: 40vw;
       border-radius: 8px;
       background-color: $dark-grey;
       padding: $spacer * 2;
@@ -107,5 +108,17 @@
         opacity: 0.8;
       }
     }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .slideshow__item-tile {
+    max-width: 60vw;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .slideshow__item-tile {
+    max-width: 90vw;
   }
 }

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import cx from "classnames";
 import './Slideshow.scss';
 
@@ -7,11 +7,16 @@ export type SlideshowItem = {
   text: string;
   image: string;
 }
-export const Slideshow: FC<{ items: SlideshowItem[] }> = ({ items }) => {
+
+type Props = {
+  items: SlideshowItem[];
+  timeInterval?: number;
+  autoSlide?: boolean;
+}
+export const Slideshow: FC<Props> = ({ items, timeInterval = 4000, autoSlide = true }) => {
   const [index, setIndex] = useState(0);
   const [shift, setShift] = useState(0);
-
-  const getInnerArray = (): SlideshowItem[] => {
+  const getTripleArray = (): SlideshowItem[] => {
     return [
       items[index - 1 < 0 ? items.length - 1 : index - 1],
       items[index],
@@ -19,9 +24,35 @@ export const Slideshow: FC<{ items: SlideshowItem[] }> = ({ items }) => {
     ];
   };
 
-  const [innerArray, setInnerArray] = useState<SlideshowItem[]>(getInnerArray());
+  const [slides, setSlides] = useState<SlideshowItem[]>(getTripleArray());
+  const timer = useRef<any>();
 
-  const moveIndex = (shift: number): void => {
+  useEffect(() => {
+    if (autoSlide) {
+      clearTimeout(timer.current);
+      timer.current = setTimeout(() => {
+        moveSlide(+1);
+      }, timeInterval);
+    }
+
+    return () => {
+      clearInterval(timer.current);
+    }
+  }, [timeInterval, index]);
+
+  const setNewTimeout = (): void => {
+    clearInterval(timer.current);
+    timer.current = setTimeout(() => {
+      moveSlide(+1);
+    }, timeInterval);
+  }
+
+  const updateArray = (): void => {
+    setSlides(getTripleArray());
+    setShift(0);
+  }
+
+  const moveSlide = (shift: number): void => {
     let newIndex = (index + shift) % items.length;
     if (newIndex === -1) {
       newIndex = items.length - 1;
@@ -33,10 +64,15 @@ export const Slideshow: FC<{ items: SlideshowItem[] }> = ({ items }) => {
     setIndex(newIndex);
   }
 
+  const clickHandler = (shift: number) => {
+    moveSlide(shift);
+    setNewTimeout();
+  }
+
   return (
     <div className="slideshow">
-      <button className="slideshow__button left" onClick={() => moveIndex(-1)}>&#10094;</button>
-      <button className="slideshow__button right" onClick={() => moveIndex(+1)}>&#10095;</button>
+      <button className="slideshow__button left" onClick={() => clickHandler(-1)}>&#10094;</button>
+      <button className="slideshow__button right" onClick={() => clickHandler(+1)}>&#10095;</button>
       <div
         className={cx("slideshow__container",
           {
@@ -45,12 +81,9 @@ export const Slideshow: FC<{ items: SlideshowItem[] }> = ({ items }) => {
           }
         )
         }
-        onTransitionEnd={() => {
-          setInnerArray(getInnerArray());
-          setShift(0);
-        }}
+        onTransitionEnd={updateArray}
       >
-        {innerArray.map((item) =>
+        {slides.map((item) =>
           <div
             className="slideshow__item"
             key={item.title}
@@ -72,7 +105,7 @@ export const Slideshow: FC<{ items: SlideshowItem[] }> = ({ items }) => {
           <div
             className={cx("slideshow__indicators-item", { active: i === index })}
             key={i}
-            >
+          >
           </div>)
         }
       </div>

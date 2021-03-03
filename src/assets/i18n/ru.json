@@ -4,6 +4,35 @@
     "about": "О нас",
     "contacts": "Контакты"
   },
+  "main": {
+    "description": "ООО “Эгмарт” осуществляет поставки инкубационных яиц из Европы и Канады. Для доставки используется современный специализированный автотранспорт надёжных европейских транспортных компаний.",
+    "slideshow": {
+      "title1": "Some title 1",
+      "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type",
+      "title2": "Some title 2",
+      "text2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type",
+      "title3": "Some title 3",
+      "text3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type"
+    },
+    "advantages": {
+      "quality": {
+        "title": "Качество",
+        "subtitle": "Лучшие производители",
+        "text": "Мы сотрудничаем с крупнейшими производителями на рынке. Благодаря их огромному опыту и высокому качеству продукта уровень продукции на высоте."
+      }
+    },
+    "quote": {
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\"",
+      "job": "CEO Romashka LLC"
+    },
+    "statistics": {
+      "title": "За последний год",
+      "deliveries": "перевозок",
+      "sold": "продано товара",
+      "satisfaction": "удовлетворенность"
+    },
+    "partners": "Наши партнёры"
+  },
   "footer": {
     "address": "108841 г. Троицк, ул. Текстильщиков, 3"
   }

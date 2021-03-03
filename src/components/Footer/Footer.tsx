@@ -19,7 +19,7 @@ export const Footer: FC<{}> = () => {
     <footer className="footer p-3">
       <div className="container row align-items-center justify-content-center">
         <div className="col-xl-4">
-          <div className="p-3">
+          <div className="p-3 d-flex flex-column align-items-center">
             <div className="mb-1">© Egmart LLC 2020</div>
             <div className="d-flex">
               <a href="#"><Vk className="mr-3" /></a>
@@ -31,13 +31,13 @@ export const Footer: FC<{}> = () => {
           </div>
         </div>
         <div className="col-xl-4">
-          <div className="p-3 px-xl-5">
+          <div className="p-3 px-xl-5 d-flex flex-column align-items-center">
             <a className="d-block mb-1" href="mailto:info@egmart.ru"><Mail className="mr-3" /> info@egmart.ru</a>
             <a href="tel:+7 (925) 728-15-75"><Phone className="mr-3" /> +7 (925) 728-15-75</a>
           </div>
         </div>
         <div className="col-xl-4">
-          <div className="p-3">
+          <div className="p-3 d-flex flex-column align-items-center">
             <a href={addressUrl} className="d-flex">
               <Location className="flex-schrink-0 mr-3" />
               {t('footer.address')}

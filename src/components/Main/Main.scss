@@ -1,0 +1,121 @@
+@import "../../assets/styles/index";
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+
+  &__text {
+    border-left: 18px solid $sherpa-blue;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .description__text {
+    font-size: 18px;
+  }
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  min-height: 400px;
+  background-color: $dark-grey;
+}
+
+.advantages {
+  &__tile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $sherpa-blue;
+    border-radius: 16px;
+    color: $foggy;
+    text-align: center;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.45);
+    transition: box-shadow 0.2s ease;
+    
+    & > svg {
+      fill: $conifer;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+.quote {
+  &__avatar {
+    width: 160px !important;
+    height: 160px !important;
+    border-radius: 50%;
+  }
+
+  &__text {
+    font-size: 32px;
+    color: $sherpa-blue;
+    font-weight: 700;
+  }
+
+  &__job {
+    font-size: 24px;
+    color: $conifer;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .quote__text {
+    font-size: 24px;
+  }
+
+  .quote__job {
+    font-size: 18px;
+  }
+}
+
+.statistics {
+  background-color: $sherpa-blue;
+  color: $foggy;
+
+  &__count {
+    font-size: 64px;
+    font-weight: 700;
+    color: $conifer;
+  }
+
+  &__center {
+    border-left: 2px solid $foggy;
+    border-right: 2px solid $foggy;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .statistics__center {
+    border: none;
+  }
+}
+
+.partners {
+  h1 span {
+    padding-bottom: $spacer;
+    border-bottom: 8px solid $conifer;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    max-width: 300px;
+    max-height: 300px;
+
+    filter: grayscale(1);
+    transition: filter 0.2s ease;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
