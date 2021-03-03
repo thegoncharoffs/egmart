@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Main } from './components/Main';
 import { About } from './components/About';
+import { Contacts } from './components/Contacts';
 import './App.scss';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Switch>
           <Route path="/main"><Main/></Route>
           <Route path="/about"><About/></Route>
-          <Route path="/contacts">null</Route>
+          <Route path="/contacts"><Contacts/></Route>
           <Route path="*">
             <Redirect to="/main"/>
           </Route>

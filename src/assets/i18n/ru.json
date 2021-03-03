@@ -36,7 +36,7 @@
   "about": {
     "photo": {
       "text1": "Более 25 лет на рынке",
-      "text2": "Средний опыт работы 8 лет",
+      "text2": "Средний опыт работы сотрудников > 8 лет",
       "text3": "Команда из 50 человек"
     },
     "description": "ООО “Эгмарт” осуществляет поставки инкубационных яиц из Европы и Канады. Для доставки используется современный специализированный автотранспорт надёжных европейских транспортных компаний.",
@@ -45,6 +45,25 @@
       "member1": {
         "name": "Иван Иванов",
         "job": "Директор"
+      }
+    }
+  },
+  "contacts": {
+    "address": {
+      "title": "Адрес",
+      "text": "108841 г. Троицк, ул. Текстильщиков, 3"
+    },
+    "phones": "Телефоны",
+    "mail": "Почта",
+    "schema": {
+      "title": "Схема проезда",
+      "car": {
+        "title": "На машине",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamelit, sed do eiusmod tempor incididunt ut sed do eiusmod tempor incididunt ut sed do eiusmod tempor incididunt ut "
+      },
+      "public-transport": {
+        "title": "На общественном транспорте",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamelit, sed do eiusmod tempor incididunt ut sed do eiusmod tempor incididunt ut sed do eiusmod tempor incididunt ut "
       }
     }
   },

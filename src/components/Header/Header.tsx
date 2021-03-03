@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import cx from 'classnames';
 import { LanguageSelect } from '../LanguageSelect';
 import logo from '../../assets/images/logo.png';
@@ -33,13 +33,13 @@ export const Header: FC<{}> = () => {
   return (
     <header className="container">
       <div className="d-flex justify-content-between align-items-center my-3">
-        <Link to="/main"><img className="logo" src={logo}></img></Link>
+        <NavLink to="/main"><img className="logo" src={logo}></img></NavLink>
 
         {/* Visible on desktop */}
         <div className="menu">
-          <Link className="menu__item" to="/main" >{t('header.main')}</Link>
-          <Link className="menu__item" to="/about">{t('header.about')}</Link>
-          <Link className="menu__item" to="/contacts">{t('header.contacts')}</Link>
+          <NavLink className="menu__item" activeClassName="active" to="/main" >{t('header.main')}</NavLink>
+          <NavLink className="menu__item" activeClassName="active" to="/about">{t('header.about')}</NavLink>
+          <NavLink className="menu__item" activeClassName="active" to="/contacts">{t('header.contacts')}</NavLink>
           <LanguageSelect />
         </div>
 
@@ -51,9 +51,9 @@ export const Header: FC<{}> = () => {
           </label>
 
           <div className="hamburger-menu__box">
-            <Link onClick={closeMenu} className="hamburger-menu__item" to="/main">{t('header.main')}</Link>
-            <Link onClick={closeMenu} className="hamburger-menu__item" to="/about">{t('header.about')}</Link>
-            <Link onClick={closeMenu} className="hamburger-menu__item" to="/contacts">{t('header.contacts')}</Link>
+            <NavLink onClick={closeMenu} className="hamburger-menu__item" activeClassName="active" to="/main">{t('header.main')}</NavLink>
+            <NavLink onClick={closeMenu} className="hamburger-menu__item" activeClassName="active" to="/about">{t('header.about')}</NavLink>
+            <NavLink onClick={closeMenu} className="hamburger-menu__item" activeClassName="active" to="/contacts">{t('header.contacts')}</NavLink>
             <div className="d-flex justify-content-center mt-3">
               <button
                 className={cx("btn btn-lg btn-outline-light mx-2", { active: i18n.language === 'ru' })}

@@ -25,6 +25,10 @@
     &:hover {
       color: $military-green;
     }
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -136,6 +140,11 @@
     &:hover {
       background-color: $dark-grey;
       color: $foggy;
+    }
+
+    &.active {
+      text-decoration: underline;
+      background-color: $sherpa-blue;
     }
   }
 }

@@ -1,0 +1,24 @@
+@import "../../assets/styles/index";
+
+.maps {
+  height: 50vh;
+}
+
+.contacts {
+  background-color: $sherpa-blue;
+  color: $foggy;
+}
+
+.schema {
+  &__subtitle {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 8px;
+      border: 6px solid $sherpa-blue;
+    }
+  }
+}

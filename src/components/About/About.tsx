@@ -10,19 +10,6 @@ export const About: FC<{}> = () => {
   const typed = useRef<Typed>();
 
   useEffect(() => {
-    i18n.on('languageChanged', () => {
-      typed.current?.destroy();
-      typed.current = new Typed("#typed", {
-        strings: [t('about.photo.text1'), t('about.photo.text2'), t('about.photo.text3')],
-        showCursor: false,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
-        startDelay: 1000,
-        loop: true,
-      });
-    })
-
     typed.current = new Typed("#typed", {
       strings: [t('about.photo.text1'), t('about.photo.text2'), t('about.photo.text3')],
       showCursor: false,
