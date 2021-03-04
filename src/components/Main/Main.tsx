@@ -181,19 +181,19 @@ export const Main: FC<{}> = () => {
 
           <div className="row my-5 pt-5">
             <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
-              <img src={avatar} />
+              <img src={avatar} alt="Company Logo" />
             </a>
 
             <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
-              <img src={avatar} />
+              <img src={avatar} alt="Company Logo"  />
             </a>
 
             <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
-              <img src={avatar} />
+              <img src={avatar} alt="Company Logo"  />
             </a>
 
             <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
-              <img src={avatar} />
+              <img src={avatar} alt="Company Logo"  />
             </a>
           </div>
 

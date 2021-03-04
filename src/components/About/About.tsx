@@ -6,17 +6,17 @@ import Typed from 'typed.js';
 import './About.scss';
 
 export const About: FC<{}> = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const typed = useRef<Typed>();
 
   useEffect(() => {
     typed.current = new Typed("#typed", {
       strings: [t('about.photo.text1'), t('about.photo.text2'), t('about.photo.text3')],
       showCursor: false,
-      typeSpeed: 100,
-      backSpeed: 50,
+      typeSpeed: 80,
+      backSpeed: 20,
       backDelay: 1000,
-      startDelay: 1000,
+      startDelay: 0,
       loop: true,
     });
 
@@ -44,25 +44,25 @@ export const About: FC<{}> = () => {
 
           <div className="row my-5 pt-5">
             <div className="team__card col-md-3 mb-5">
-              <img className="team__photo mb-3" src={avatar} />
+              <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>
 
             <div className="team__card col-md-3 mb-5">
-              <img className="team__photo mb-3" src={avatar} />
+              <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>
 
             <div className="team__card col-md-3 mb-5">
-              <img className="team__photo mb-3" src={avatar} />
+              <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>
 
             <div className="team__card col-md-3 mb-5">
-              <img className="team__photo mb-3" src={avatar} />
+              <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>

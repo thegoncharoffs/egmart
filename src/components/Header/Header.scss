@@ -1,7 +1,12 @@
 @import "../../assets/styles/index";
 
 .header {
-  margin: $spacer;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
 }
 
 .logo {
