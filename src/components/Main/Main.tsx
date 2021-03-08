@@ -180,19 +180,19 @@ export const Main: FC<{}> = () => {
           </h1>
 
           <div className="row my-5 pt-5">
-            <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
+            <a className="col-6 col-md-3 mb-3 d-flex justify-content-center" href="#">
               <img src={avatar} alt="Company Logo" />
             </a>
 
-            <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
+            <a className="col-6 col-md-3 mb-3 d-flex justify-content-center" href="#">
               <img src={avatar} alt="Company Logo"  />
             </a>
 
-            <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
+            <a className="col-6 col-md-3 mb-3 d-flex justify-content-center" href="#">
               <img src={avatar} alt="Company Logo"  />
             </a>
 
-            <a className="col-md-3 mb-3 d-flex justify-content-center" href="#">
+            <a className="col-6 col-md-3 mb-3 d-flex justify-content-center" href="#">
               <img src={avatar} alt="Company Logo"  />
             </a>
           </div>

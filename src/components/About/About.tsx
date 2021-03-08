@@ -113,25 +113,25 @@ export const About: FC<{}> = () => {
           </h1>
 
           <div className="row my-5 pt-5">
-            <div className="team__card col-md-3 mb-5">
+            <div className="team__card col-6 col-md-3 mb-5">
               <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>
 
-            <div className="team__card col-md-3 mb-5">
+            <div className="team__card col-6  col-md-3 mb-5">
               <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>
 
-            <div className="team__card col-md-3 mb-5">
+            <div className="team__card col-6 col-md-3 mb-5">
               <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
             </div>
 
-            <div className="team__card col-md-3 mb-5">
+            <div className="team__card col-6 col-md-3 mb-5">
               <img className="team__photo mb-3" src={avatar} alt="Member Photo" />
               <h5 className="team__name">{t('about.team.member1.name')}</h5>
               <span className="team__job">{t('about.team.member1.job')}</span>
