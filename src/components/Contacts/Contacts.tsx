@@ -1,10 +1,12 @@
-import React, { FC, useEffect, useRef } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Contacts.scss';
 
 export const Contacts: FC<{}> = () => {
   const { t } = useTranslation();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

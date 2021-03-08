@@ -20,6 +20,7 @@ export const About: FC<{}> = () => {
       startDelay: 0,
       loop: true,
     });
+    window.scrollTo(0, 0);
 
     return () => typed.current?.destroy();
   }, [])

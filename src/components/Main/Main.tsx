@@ -51,7 +51,11 @@ export const Main: FC<{}> = () => {
   useEffect(() => {
     window.addEventListener('scroll', startCounts);
     return () => window.removeEventListener('scroll', startCounts);
-  })
+  });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const slideshowItems = [
     {
