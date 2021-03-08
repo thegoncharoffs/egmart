@@ -2,6 +2,9 @@
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 
+@import 'photoswipe/dist/photoswipe.css';
+@import 'photoswipe/dist/default-skin/default-skin.css';
+
 @import './assets/styles/fonts.scss';
 
 body {

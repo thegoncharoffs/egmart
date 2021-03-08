@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import team from '../../assets/images/team.jpg';
 import avatar from '../../assets/images/avatar.png';
 import Typed from 'typed.js';
+import { Gallery, Item } from 'react-photoswipe-gallery'
 import './About.scss';
 
 export const About: FC<{}> = () => {
@@ -28,12 +29,81 @@ export const About: FC<{}> = () => {
     <>
       <section className="photo" style={{ backgroundImage: `url(${team})` }}>
         <div className="container">
-          <span className="photo__text px-3" id="typed"></span>
+          <span className="photo__text" id="typed"></span>
         </div>
       </section>
 
       <section className="description container">
         <div className="description__text my-5 p-5">{t('main.description')}</div>
+      </section>
+
+      <section className='photo-gallery container'>
+        <div className="row">
+
+
+          <Gallery shareButton={false}>
+            <Item
+              original="https://placekitten.com/1024/768?image=1"
+              thumbnail="https://placekitten.com/240/180?image=1"
+              width="1024"
+              height="768"
+            >
+              {({ ref, open }) => (
+                <img
+                  className="col-3"
+                  ref={ref as React.MutableRefObject<HTMLImageElement>}
+                  onClick={open}
+                  src="https://placekitten.com/240/180?image=1"
+                />
+              )}
+            </Item>
+            <Item
+              original="https://placekitten.com/1024/768?image=2"
+              thumbnail="https://placekitten.com/240/180?image=2"
+              width="1024"
+              height="768"
+            >
+              {({ ref, open }) => (
+                <img
+                  className="col-3"
+                  ref={ref as React.MutableRefObject<HTMLImageElement>}
+                  onClick={open}
+                  src="https://placekitten.com/240/180?image=2"
+                />
+              )}
+            </Item>
+            <Item
+              original="https://placekitten.com/1024/768?image=1"
+              thumbnail="https://placekitten.com/240/180?image=1"
+              width="1024"
+              height="768"
+            >
+              {({ ref, open }) => (
+                <img
+                  className="col-3"
+                  ref={ref as React.MutableRefObject<HTMLImageElement>}
+                  onClick={open}
+                  src="https://placekitten.com/240/180?image=1"
+                />
+              )}
+            </Item>
+            <Item
+              original="https://placekitten.com/1024/768?image=2"
+              thumbnail="https://placekitten.com/240/180?image=2"
+              width="1024"
+              height="768"
+            >
+              {({ ref, open }) => (
+                <img
+                  className="col-3"
+                  ref={ref as React.MutableRefObject<HTMLImageElement>}
+                  onClick={open}
+                  src="https://placekitten.com/240/180?image=2"
+                />
+              )}
+            </Item>
+          </Gallery>
+        </div>
       </section>
 
       <section className="team">

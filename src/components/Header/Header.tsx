@@ -61,7 +61,7 @@ export const Header: FC<{}> = () => {
                   onClick={() => i18n.changeLanguage('ru')}
                 >
                   RU
-              </button>
+                </button>
                 <button
                   className={cx("btn btn-lg btn-outline-light mx-2", { active: i18n.language === 'en' })}
                   onClick={() => i18n.changeLanguage('en')}
