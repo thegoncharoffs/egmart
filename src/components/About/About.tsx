@@ -50,7 +50,7 @@ export const About: FC<{}> = () => {
             >
               {({ ref, open }) => (
                 <img
-                  className="col-3"
+                  className="col-md-3 col-6 mb-3"
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
                   onClick={open}
                   src="https://placekitten.com/240/180?image=1"
@@ -65,7 +65,7 @@ export const About: FC<{}> = () => {
             >
               {({ ref, open }) => (
                 <img
-                  className="col-3"
+                  className="col-md-3 col-6 mb-3"
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
                   onClick={open}
                   src="https://placekitten.com/240/180?image=2"
@@ -80,7 +80,7 @@ export const About: FC<{}> = () => {
             >
               {({ ref, open }) => (
                 <img
-                  className="col-3"
+                  className="col-md-3 col-6 mb-3"
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
                   onClick={open}
                   src="https://placekitten.com/240/180?image=1"
@@ -95,7 +95,7 @@ export const About: FC<{}> = () => {
             >
               {({ ref, open }) => (
                 <img
-                  className="col-3"
+                  className="col-md-3 col-6 mb-3"
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
                   onClick={open}
                   src="https://placekitten.com/240/180?image=2"
